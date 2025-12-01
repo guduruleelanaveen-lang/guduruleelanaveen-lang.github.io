@@ -108,8 +108,9 @@ html[data-theme="light"] .header {
 }
 
 .site-logo {
-  height: 32px;
+  height: 36px;        /* ✅ Perfect default size for desktops */
   width: auto;
+  max-width: 160px;   /* ✅ Prevents extra-wide logos */
   object-fit: contain;
   display: block;
 }
@@ -862,5 +863,19 @@ html[data-theme="light"] .footer {
 
   .hero-avatar-wrapper {
     width: 220px;
+  }
+}
+
+@media (max-width: 768px) {
+  .site-logo {
+    height: 30px;     /* smaller on tablets & phones */
+    max-width: 130px;
+  }
+}
+
+@media (max-width: 480px) {
+  .site-logo {
+    height: 26px;     /* smaller on very small phones */
+    max-width: 110px;
   }
 }
