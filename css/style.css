@@ -312,11 +312,7 @@ html[data-theme="light"] .theme-toggle {
 }
 
 .hero-avatar-ring {
-  position: absolute;
-  inset: 12px;
-  border-radius: 999px;
-  border: 1px dashed rgba(248, 250, 252, 0.4);
-  pointer-events: none;
+   display: none;
 }
 
 .hero-stats {
