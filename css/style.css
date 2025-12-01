@@ -108,9 +108,9 @@ html[data-theme="light"] .header {
 }
 
 .site-logo {
-  height: 42px;        /* ✅ Perfect default size for desktops */
+  height: clamp(26px, 4vw, 40px);  /* auto scales between mobile & desktop */
   width: auto;
-  max-width: 160px;   /* ✅ Prevents extra-wide logos */
+  max-width: 180px;                /* stops wide logos becoming too big */
   object-fit: contain;
   display: block;
 }
@@ -866,16 +866,3 @@ html[data-theme="light"] .footer {
   }
 }
 
-@media (max-width: 768px) {
-  .site-logo {
-    height: 30px;     /* smaller on tablets & phones */
-    max-width: 130px;
-  }
-}
-
-@media (max-width: 480px) {
-  .site-logo {
-    height: 26px;     /* smaller on very small phones */
-    max-width: 110px;
-  }
-}
